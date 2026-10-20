@@ -1,4 +1,4 @@
-﻿﻿$ErrorActionPreference = 'Continue'
+﻿$ErrorActionPreference = 'Continue'
 $root = Split-Path -Parent $PSScriptRoot
 
 Write-Host "==========================================" -ForegroundColor Cyan

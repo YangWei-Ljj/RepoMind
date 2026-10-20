@@ -1,4 +1,4 @@
-﻿﻿$ErrorActionPreference = 'Stop'
+﻿$ErrorActionPreference = 'Stop'
 $root = Split-Path -Parent $PSScriptRoot
 Set-Location $root
 $Host.UI.RawUI.WindowTitle = 'RepoMind 控制器 - 关闭此窗口即停止项目'
