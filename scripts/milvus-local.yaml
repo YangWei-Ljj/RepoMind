@@ -1,0 +1,36 @@
+# RepoMind Milvus standalone 本地存储配置
+# MinIO 开源项目已于 2026 年归档停更（镜像从 Docker Hub 移除），
+# 改用 Milvus 官方支持的 local 存储模式，无需外部对象存储。
+etcd:
+  endpoints: etcd:2379
+  rootPath: repomind
+  metaSubPath: meta
+  kvSubPath: kv
+
+localStorage:
+  # Local path to where vector data are stored during a search or a query
+  path: /var/lib/milvus/data/
+
+minio:
+  address: localhost
+  port: 9000
+  accessKeyID: minioadmin
+  secretAccessKey: minioadmin
+  useSSL: false
+  bucketName: a-bucket
+  rootPath: files
+
+mq:
+  type: rocksmq
+
+rocksmq:
+  path: /var/lib/milvus/rdb_data
+
+common:
+  storageType: local # available values: [local, remote, opendal]
+  security:
+    authorizationEnabled: false
+
+log:
+  level: info
+  stdout: true
